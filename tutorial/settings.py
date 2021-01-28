@@ -87,13 +87,16 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 ITEM_PIPELINES = {
-    'tutorial.pipelines.BuyoyoPipeline': 300,
-    #'tutorial.pipelines.MongoPipeline': 299,
+    #'tutorial.pipelines.BuyoyoPipeline': 300,
+    'tutorial.pipelines.MongoPipeline': 299,
 }
 # 是否遵循robot协议
 ROBOTSTXT_OBEY = False
 
 #mysql配置
-MYSQL_HOST = '120.24.94.129'
-MYSQL_USERNAME = 'root'
-MYSQL_PASSWORD = 'root123456'
+MYSQL_HOST = ''
+MYSQL_USERNAME = ''
+MYSQL_PASSWORD = ''
+
+MONGO_URI = 'localhost:27017'
+MONGO_DATABASE = 'demo'

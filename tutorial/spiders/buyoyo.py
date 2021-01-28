@@ -23,8 +23,7 @@ class BuyoyoSpider(scrapy.Spider):
 
     def after_login(self, response):
         cookie1 = response.headers.getlist('Set-Cookie')
-        def flat_map(f, xs): 
-            return [y for ys in xs for y in f(ys)]
+        def flat_map(f, xs): return [y for ys in xs for y in f(ys)]
 
         dic = {i[0]: i[1] for i in map(lambda a: a.split('='),
                                        filter(lambda s: s.count('=') > 0,
